@@ -1,5 +1,7 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
+  plugins: [require("daisyui")],
+  
   theme: {
     extend: {
       colors: {
@@ -16,6 +18,5 @@ module.exports = {
         mint:'#c6fcec'
       },
     },
-  },
-  plugins: [],
+  }
 };
