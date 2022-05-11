@@ -143,7 +143,7 @@ export default function Index() {
           <p className="text-3xl text-center">Education</p>
           {resume.education.map((edu, index) => {
             return (
-              <div className="m-2 p-2 outline outline-white outline-2" key={index}>
+              <div className="my-4 p-2 outline outline-white rounded-lg outline-2" key={index}>
                 <p className="m-4 text-3xl text-white">
                   {edu.name}
                 </p>
