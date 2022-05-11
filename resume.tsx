@@ -12,9 +12,9 @@ import { SiTypescript,SiFlask} from "react-icons/si";
 
 const tags = {
     "celo": { "name":"celo", "color": "green"},
-    "solidity": { "name":"solidity", "color": "gradient-to-r from-green to-white"},
+    "solidity": { "name":"solidity", "color": "blue"},
     "javascript": { "name":"javascript", "color": "blue"},
-    "react": { "name":"react", "color": "blue"},
+    "react": { "name":"react", "color": "pink"},
     "hackathon": { "name":"hackathon", "color": "blue"},
     "design": { "name":"design", "color": "yellow"},
     "polyBlockchain": { "name":"Blockchain @poly", "color": "green"},
@@ -26,19 +26,19 @@ const resume = {
 
     "education": [
         {
+            "name": "Cal Poly, San Luis Obispo",
+            "degree": "Computer Science",
+            "date": "2020 - Present",
+            "description": " Currently enrolled in my third year, was attracted to cal poly due their emphasis on learn by doing" +
+                " I figured it would be a good fit because i find the majority of my learning comes from exploring previously uncharted territory"
+        },
+        {
             "name": "University of Minnesota - Twin Cities",
             "degree": "CS + MATH (attended senior year of High School)",
             "date": "Sept. 2018 - May 2019",
             "description": "Was accepted into a program my senior year to attend classes at the university, " +
                 "During this year I took 4 courses, 2 math and 2 computer science, receiving A's and B's in all courses"
 
-        },
-        {
-            "name": "Cal Poly, San Luis Obispo",
-            "degree": "Computer Science",
-            "date": "2020 - Present",
-            "description": " Currently enrolled in my third year, was attracted to cal poly due their emphasis on learn by doing" +
-                " I figured it would be a good fit because i find the majority of my learning comes from exploring previously uncharted territory"
         }
     ],      
 
@@ -78,7 +78,7 @@ const resume = {
         {
           name: "mustangDAO",
           url: "tbd",
-            tags: [{...tags.celo}, tags.solidity, tags.design, tags.polyBlockchain],
+            tags: [tags['celo'], tags.solidity, tags.design, tags.polyBlockchain],
           desription: "Decentralized governance for blockchain @ cal poly"
         },
         {
