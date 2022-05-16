@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import { resolvePtr } from "dns/promises";
+import { MdComputer } from "react-icons/md";
 import { FaGithub, FaLinkedin,  } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
 import { useOptionalUser } from "~/utils";
@@ -11,17 +12,17 @@ function Tool(tool) {
   return (
     <div
       key={tool.i}
-      className=" aspect-square w-28 rounded-full border border-4 border-white p-2 text-center items-center justify-center"
+      className="aspect-square rounded-full border border-4 border-white p-2 text-center items-center justify-center bg-clip-content"
     >
       <p className=" py-2 font-bold ">{tool.name}</p>
-      <p className="text-4xl pl-3 text-center text-white bg-inherit">{tool.icon}</p>
+      <p className="text-4xl pl-3 text-center bg-clip-text text-white">{tool.icon}</p>
     </div>);
 
 }
 
 function Tag(tag) {
   return (
-    <div className={`px-3 py-3 rounded-xl bg-${tag.color}  outline outline-2 hover:outline-${tag.color} hover:bg-opacity-0 hover:text-${tag.color}`}>
+    <div key={tag.i} className={`px-3 py-1 rounded-xl bg-${tag.color} outline outline-2 hover:outline-${tag.color} hover:bg-opacity-0 hover:text-${tag.color}`}>
       <p className="text-white text-sm">{tag.name}</p>
     </div>)
 }
@@ -61,23 +62,51 @@ export default function Index() {
   const user = useOptionalUser();
   return (
     <div className="bg-black">
-      <div className="w-15 absolute top-0 left-0 m-1 mr-5 flex h-full flex-col justify-between p-2 pt-4 text-3xl">
-        <div>
+
+<div className="w-12 h-full px-1 absolute text-3xl">
+  <ul className="relative">
+  <div>
           <h1 className="py-4">Jk</h1>
           <p className="text-right text-pink">D</p>
           <p className="text-right text-yellow">E</p>
           <p className="text-right text-blue">V</p>
         </div>
         <div>
-          <div className="mt-5 rounded-lg p-1 hover:bg-white hover:text-pink">
+    <li className="relative">
+      <a className="" href="#!">
+      <div className="mt-5 rounded-lg p-1 hover:bg-white hover:text-pink">
             <FaGithub />
           </div>
-          <div className="mt-5 rounded-lg p-1 hover:bg-white hover:text-blue">
+      </a>
+    </li>
+    <li className="relative">
+      <a className="" href={resume.notion_home}><div className="mt-5 justify-center rounded-lg p-1 hover:bg-yellow hover:text-black">
+            <SiNotion />
+          </div></a>
+    </li>
+    <li className="relative">
+      <a className="" href="#!">
+      </a>
+      <div className="mt-5 rounded-lg p-1 hover:bg-white hover:text-blue">
             <FaLinkedin />
           </div>
-          <div className="mt-5 rounded-lg p-1 hover:bg-yellow">
-            <SiNotion />
-          </div>
+    </li>
+    <li className="relative">
+      <a className="" href="/IRL">
+        <div className="mt-5 p-1  rounded-lg hover:bg-pink hover ">
+        <MdComputer/>
+      </div>
+      </a>
+    </li>
+    </div>
+  </ul>
+</div>
+      <div className="w-15 absolute top-0 left-0 m-1 mr-5 flex h-full flex-col justify-between p-2 pt-4 text-3xl">
+       
+        <div>
+          
+       
+          
         </div>
         {/* link github profile  */}
       </div>
@@ -120,7 +149,7 @@ export default function Index() {
             )
           })}
         </div>
-        <div className="justify-center text-center bg-gradient-to-br from-blue to-pink bg-fixed bg-clip-text  text-transparent bg-clip-border">
+        <div className="justify-center text-center bg-gradient-to-br from-blue to-pink bg-fixed bg-clip-text  text-transparent ">
           <p className="text-3xl"> Tools</p>
           {resume.skills.map((category, index) => {
             return (
@@ -146,9 +175,9 @@ export default function Index() {
               <div className="my-4 p-2 outline outline-white rounded-lg outline-2" key={index}>
                 <p className="m-4 text-3xl text-white">
                   {edu.name}
+                <p className="text-sm opacity-50">{edu.date}</p>
+                  <p className="">{edu.description}</p>
                 </p>
-                <p className="opacity-50">{edu.date}</p>
-                <p className="">{edu.description}</p>
                 
               </div>
             );

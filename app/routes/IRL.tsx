@@ -3,6 +3,7 @@ import { useState,useRef } from 'react';
 
 import { VncScreen } from 'react-vnc';
 
+const BASE_URL = "47.45.119.117";
 
 export default function IRL() {
     const connectToMetamask = async () => {
@@ -32,11 +33,12 @@ export default function IRL() {
 
       {walletConnected ? (
         <div>
-            <h2>Wallet Connected</h2>
-            <h3>Balance: {walletAddress}</h3>
+            <h2 className='text-green text-2xl text left'>Wallet Connected</h2>
+            <p>Your hosts: </p>
+            {/* <h3>Balance: {walletAddress}</h3> */}
         </div>) : ( <div>
             <h2>Wallet Not Connected</h2>
-            <button onClick={connectToMetamask}>Connect with Metamask</button>
+            <button  className='bg-blue rounded-lg px-2 text-xl py-1' onClick={connectToMetamask}>Connect with Metamask</button>
         </div>)}
         {/* <VncScreen
       url='ws://192.168.1.68:5900'
@@ -48,7 +50,10 @@ export default function IRL() {
       }}
       ref={vncScreenRef}
     /> */}
-      <iframe src="http://192.168.1.68:8080/view-stream.html" width='600px' height="450px" />
+    {walletConnected ? (
+      <iframe title="host" src={`http://${BASE_URL}:8080/view-stream.html`} width='1000px' height="800px" />
+    ) : (
+      "no Hosts available")}
       <div className="mockup-code">
         <pre data-prefix="$"><code> Welcome to </code></pre> 
         {/* <pre data-prefix=">" className="text-warning"><code>installing...</code></pre>  */}

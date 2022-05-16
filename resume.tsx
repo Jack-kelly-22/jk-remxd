@@ -17,12 +17,16 @@ const tags = {
     "react": { "name":"react", "color": "pink"},
     "hackathon": { "name":"hackathon", "color": "blue"},
     "design": { "name":"design", "color": "yellow"},
-    "polyBlockchain": { "name":"Blockchain @poly", "color": "green"},
+    "polyBlockchain": { "name":"Blockchain @poly", "color": "blue"},
     
 };
 
+
+
 const resume = {
     "name": "Jack Kelly",
+    "notion_home": "https://ripe-anteater-2a0.notion.site/Jack-Kelly-cfbf034984dd4e46963679c53e8853d0",
+    "notion_portfolio" : "https://ripe-anteater-2a0.notion.site/J-Kelly-Portfolio-etc-5d37a0c639014c87a9c78383b52137e0",
 
     "education": [
         {
@@ -51,22 +55,6 @@ const resume = {
         {"name": "RcadeDAO", url:"rcadeDAO.io"}
     ],
 
-    previous_projects: [
-        {
-            "name": "Buckets",
-            "tags": [{'name': 'solidity'}],
-        },
-        {
-            "name": "Stitch",
-
-        },
-        {
-            "name": "Buckets",
-        },
-        {
-            "name": "Buckets",
-        }
-    ],
 
     gh_repos : [
         {
@@ -78,12 +66,13 @@ const resume = {
         {
           name: "mustangDAO",
           url: "tbd",
-            tags: [tags['celo'], tags.solidity, tags.design, tags.polyBlockchain],
+            tags: [tags.solidity, tags.design, tags.react, tags.polyBlockchain],
           desription: "Decentralized governance for blockchain @ cal poly"
         },
         {
           name: "synth.money",
           url: "https://github.com/CalPolyBlockchain/synth-node-hackathon",
+          tags: [tags.celo, tags.hackathon, tags.react],
           desription: "Simplified yield redelegation for Uniswap V3 non-fungible liquidity positions"
         },
         {
