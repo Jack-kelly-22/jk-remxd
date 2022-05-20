@@ -28,15 +28,19 @@ export default function IRL() {
     const [walletAddress, setWalletAddress] = useState("");
     const vncScreenRef = useRef<React.ElementRef<typeof VncScreen>>(null);
   return (
-    <div>
-      <h1 className="py-4">Jk</h1>
+    <div className='flex flex-col items-center p-3 m-3'>
+      <div className="mockup-code">
+        <pre data-prefix="$"><code> Welcome to </code></pre> 
+        {/* <pre data-prefix=">" className="text-warning"><code>installing...</code></pre>  */}
+        <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
+        </div>
 
       {walletConnected ? (
         <div>
-            <h2 className='text-green text-2xl text left'>Wallet Connected</h2>
+            <h2 className='text-green text-2xl text left m-2'>Wallet Connected</h2>
             <p>Your hosts: </p>
             {/* <h3>Balance: {walletAddress}</h3> */}
-        </div>) : ( <div>
+        </div>) : ( <div className='p-3 m-2'>
             <h2>Wallet Not Connected</h2>
             <button  className='bg-blue rounded-lg px-2 text-xl py-1' onClick={connectToMetamask}>Connect with Metamask</button>
         </div>)}
@@ -54,11 +58,7 @@ export default function IRL() {
       <iframe title="host" src={`http://${BASE_URL}:8080/view-stream.html`} width='1000px' height="800px" />
     ) : (
       "no Hosts available")}
-      <div className="mockup-code">
-        <pre data-prefix="$"><code> Welcome to </code></pre> 
-        {/* <pre data-prefix=">" className="text-warning"><code>installing...</code></pre>  */}
-        <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
-        </div>
+      
     </div>
   );
 }
