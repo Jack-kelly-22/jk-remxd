@@ -3,7 +3,6 @@ import { resolvePtr } from "dns/promises";
 import { MdComputer } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
-import { useOptionalUser } from "~/utils";
 import ReactTypingEffect from "react-typing-effect";
 import resume from "resume";
 // import './index.css';
@@ -59,7 +58,6 @@ function GhBox(gh) {
 }
 
 export default function Index() {
-  const user = useOptionalUser();
   return (
     <div className="bg-black">
       <div className="fixed h-full w-12 px-1 text-3xl">

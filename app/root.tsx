@@ -14,7 +14,6 @@ import {
 } from "@remix-run/react";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
-import { getUser } from "./session.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -32,7 +31,7 @@ type LoaderData = {
 
 export const loader: LoaderFunction = async ({ request }) => {
   return json<LoaderData>({
-    user: await getUser(request),
+    user:{},
   });
 };
 

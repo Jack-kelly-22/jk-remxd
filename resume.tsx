@@ -34,7 +34,12 @@ const resume = {
             "degree": "Computer Science",
             "date": "2020 - Present",
             "description": " Currently enrolled in my third year, was attracted to cal poly due their emphasis on learn by doing" +
-                " I figured it would be a good fit because i find the majority of my learning comes from exploring previously uncharted territory"
+                " I figured it would be a good fit because i find the majority of my learning comes from exploring previously uncharted territory",
+            "fav_classes": [
+                {name: "Soft. Eng. I/II", color: "blue", "desription": "Software Engineering I/II, This course consisted of a two quarter(20 week) group project. During this class I worked with a group of 4 peers to create online news aggregator website"},
+                {name: "Soft. Eng. I/II", color: "blue", "desription": "Software Engineering I/II, This course consisted of a two quarter(20 week) group project. During this class I worked with a group of 4 peers to create online news aggregator website"},
+                {name: "Soft. Eng. I/II", color: "blue", "desription": "Software Engineering I/II, This course consisted of a two quarter(20 week) group project. During this class I worked with a group of 4 peers to create online news aggregator website"},
+            ]
         },
         {
             "name": "University of Minnesota - Twin Cities",
@@ -61,7 +66,7 @@ const resume = {
           name: "SEAM",
           url: "https://github.com/Jack-kelly-22/seam",
           tags: [tags.celo, tags.solidity, tags.javascript, tags.react],
-          desription: "Defi yield aggregator (YETF) for celo"
+          desription: "Defi yield aggregator (YETF) for celo stable coin liquidity providers"
         },
         {
           name: "mustangDAO",
@@ -75,11 +80,11 @@ const resume = {
           tags: [tags.celo, tags.hackathon, tags.react],
           desription: "Simplified yield redelegation for Uniswap V3 non-fungible liquidity positions"
         },
-        {
-          name: "precycle",
-          url: "soon",
-          desription: "Precycle concept for incentivized recycling"
-        },
+        // {
+        //   name: "precycle",
+        //   url: "soon",
+        //   desription: "Precycle concept for incentivized recycling"
+        // },
       ],
 
     skills: [
