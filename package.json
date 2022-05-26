@@ -15,7 +15,6 @@
     "format": "prettier --write .",
     "generate:css": "tailwindcss -o ./app/styles/tailwind.css",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "setup": "prisma migrate dev && prisma db seed",
     "start": "remix-serve build",
     "start:mocks": "binode --require ./mocks -- @remix-run/serve:remix-serve build",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 \"cypress open\"",
@@ -81,11 +80,6 @@
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^3.14.1",
     "typescript": "^4.6.3"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "prisma": {
-    "seed": "ts-node --require tsconfig-paths/register prisma/seed.ts"
   }
+  
 }
