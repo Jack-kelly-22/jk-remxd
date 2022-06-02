@@ -27,6 +27,7 @@ const resume = {
     "name": "Jack Kelly",
     "notion_home": "https://ripe-anteater-2a0.notion.site/Jack-Kelly-cfbf034984dd4e46963679c53e8853d0",
     "notion_portfolio" : "https://ripe-anteater-2a0.notion.site/J-Kelly-Portfolio-etc-5d37a0c639014c87a9c78383b52137e0",
+    "linkedin": "https://www.linkedin.com/in/jack-kelly-86099a19b/",
 
     "education": [
         {

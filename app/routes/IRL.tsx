@@ -17,7 +17,7 @@ export default function IRL() {
         // setProvider(provider);
         setWalletAddress(accounts[0]);
         // getPool(provider).then(data => {
-        //   console.log("pool data",data);
+          // console.log("pool data",data);
         //   setPoolData(data);
           
         // });
