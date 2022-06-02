@@ -55,7 +55,7 @@ export default function IRL() {
       ref={vncScreenRef}
     /> */}
     {walletConnected ? (
-      <iframe title="host" src={`http://${BASE_URL}:8080/view-stream.html`} width='1000px' height="800px" />
+      <iframe title="host" src={`http://opto0:6081/vnc.html?host=opto0&port=6081`} width='1000px' height="800px" />
     ) : (
       "no Hosts available")}
       

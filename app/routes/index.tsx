@@ -22,7 +22,7 @@ function Tool(tool) {
 function Tag(tag) {
   return (
     <div
-      key={tag.i}
+      key={`tag-${tag.name}-${tag.i}`}
       className={`rounded-xl px-3 py-1 bg-${tag.color} outline outline-2 hover:outline-${tag.color} hover:bg-opacity-0 hover:text-${tag.color}`}
     >
       <p className="ml-2 text-center text-sm text-white">{tag.name}</p>
@@ -33,13 +33,16 @@ function Tag(tag) {
 function GhBox(gh) {
   return (
     <div
-      key={gh.index}
-      className="my-6 rounded-lg border border-2 bg-gradient-to-br from-mint to-magenta bg-clip-border bg-clip-text p-3 py-4 text-2xl text-transparent "
+      key={`gh-repo-${gh.name}`}
+      className="my-6 rounded-lg outline outline-3 outline-white bg-gradient-to-br from-mint to-magenta bg-clip-text p-3 py-4 text-2xl text-transparent "
     >
-      <div className="m-3 bg-clip-border p-3  px-3  ">
+      <div className="m-3 p-3">
         <p className="text-left text-2xl font-bold text-white">{gh.name}</p>
         <p className="pl-10 text-left">{gh.desription}</p>
-        <div className="m-2 flex flex-auto justify-end p-1 text-white">
+        <div className="m-2 flex flex-auto justify-end p-1 gap gap-2">
+        {gh.tags?.map((tag, index) => {
+          return <Tag {...tag} i={index} />;
+        })}
           <div className="rounded-lg p-2 text-white hover:bg-pink">
             <a href={gh.url}>
               <FaGithub />
@@ -48,13 +51,13 @@ function GhBox(gh) {
         </div>
       </div>
       <div className="flex flex-row gap-3">
-        {gh.tags?.map((tag, index) => {
-          return <Tag {...tag} i={index} />;
-        })}
+        
       </div>
     </div>
   );
 }
+
+
 
 export default function Index() {
   return (
@@ -108,8 +111,7 @@ export default function Index() {
       </div>
 
       <div className=" m-8 p-5 pl-10">
-        <div className="m-5  p-4 text-white ">
-          <p className="text-center text-4xl">
+        <div className="m-5 text-center text-4xl p-4 text-white ">
             <ReactTypingEffect
               text={[
                 "Software dev",
@@ -132,7 +134,6 @@ export default function Index() {
                 );
               }}
             />
-          </p>
         </div>
         {/* create  */}
 
@@ -167,6 +168,14 @@ export default function Index() {
             );
           })}
         </div>
+        <div className="bg-gradient-to-tr from-yellow to-teal  bg-fixed my-10 bg-clip-text text-left">
+        <p className="my-10 bg-clip-text text-center text-3xl">Experience</p>
+          {resume.experience.map((exp, index) => {
+            return (
+              <Experience {...exp} i={index} />
+            );
+          })}
+          </div>
       </div>
     </div>
   );
@@ -175,14 +184,34 @@ export default function Index() {
 function Education(edu) {
   return (
     <div
-      className="my-8 rounded-lg p-2 outline outline-2 outline-white"
+      className="my-8 rounded-lg p-2 border border-2 border-white text-transparent"
       key={edu.i}
     >
-      <p className="m-4 p-2 text-3xl text-transparent">
+      <p className="m-4 p-2 text-3xl ">
         {edu.name}
         <p className="text-sm text-white pl-5">{edu.date}</p>
         <p className="text-sm pt-4 ">{edu.description}</p>
       </p>
     </div>
   );
+  }
+  
+  function Experience(exp) {
+    return (
+      <div
+        className="my-8 rounded-lg p-2 outline outline-2 outline-white text-transparent"
+        key={`exp-${exp.i}`}
+      >
+        <p className="m-3 p-2 text-3xl">{exp.name}</p>
+          <p className="text-sm text-white  pl-5 opacity-50">{exp.date}</p>
+          {exp.bullets?.map((desc, index) => {
+            return (
+              <p className="text-sm pt-4 pl-3 text-white " key={index}>
+                {desc}
+              </p>
+            )
+          })}
+          {/* <p className="text-sm pt-4 ">{exp.description}</p> */}
+      </div>
+    );
 }
