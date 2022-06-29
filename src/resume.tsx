@@ -20,7 +20,7 @@ const tags = {
   polyBlockchain: { name: "Blockchain @poly", color: "blue" },
 };
 
-const resume = {
+export const resume = {
   name: "Jack Kelly",
   notion_home:
     "https://ripe-anteater-2a0.notion.site/Jack-Kelly-cfbf034984dd4e46963679c53e8853d0",
@@ -189,4 +189,4 @@ const resume = {
     ],
 };
 
-export default resume;
+

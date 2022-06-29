@@ -16,10 +16,15 @@ module.exports = {
         rose: '#87547a',
         magenta: '#bf05ed',
         mint:'#14e0b4'
+        
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(200, 100, 0, 0.2)',
+      },
+      backgroundImage: {
+        "team-img": "url(../public/home/team-img.png)",
       }
-    },
+
   }
+}
 };

@@ -1,3 +1,23 @@
 {
-    "workbench.colorTheme": "Synthwave 80's - Future Blue"
+    "workbench.colorTheme": "Synthwave 80's - Future Blue",
+    "peacock.color": "#6b3ad2",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#8a63db",
+        "activityBar.activeBorder": "#e7b197",
+        "activityBar.background": "#8a63db",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#e7b197",
+        "activityBarBadge.foreground": "#15202b",
+        "sash.hoverBorder": "#8a63db",
+        "statusBar.background": "#6b3ad2",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#8a63db",
+        "statusBarItem.remoteBackground": "#6b3ad2",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#6b3ad2",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#6b3ad299",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    }
 }

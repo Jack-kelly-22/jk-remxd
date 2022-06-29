@@ -13,7 +13,6 @@ const OptoABI = [
 const OPTO_ADDRESS = "0xd38a0D565F1b981f2736528cd071239432c2fdc1";
 
 const BASE_URL = "47.45.119.117";
-
 const getOptos = async (provider) => {
   const optoC = new ethers.Contract(OPTO_ADDRESS, OptoABI, provider);
   // const optos = await optoC.balanceOf(provider.address);
@@ -41,21 +40,22 @@ export default function IRL() {
     const [optos, setOptos] = useState(null);
     const [walletConnected, setWalletConnected] = useState(false);
     const [walletAddress, setWalletAddress] = useState("");
-    const vncScreenRef = useRef<React.ElementRef<typeof VncScreen>>(null);
+    const port = "6082";
+    // const vncScreenRef = useRef<React.ElementRef<typeof VncScreen>>(null);
   return (
-    <div className='flex flex-col items-center p-3 m-3'>
+    <div className='flex flex-col items-center p-3 m-3 w-full'>
       <div className="mockup-code">
         <pre data-prefix="$"><code> Welcome to aptosXoptos</code></pre> 
         <pre data-prefix=">>>" data-suffix=">>>"><code>Your opto hosts</code>  </pre>
         
         {/* <pre data-prefix=">" className="text-warning"><code>installing...</code></pre>  */}
-        <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
+        {/* <pre data-prefix=">" className="text-success"><code>Done!</code></pre> */}
         </div>
 
       {walletConnected ? (
         <div>
             <h2 className='text-green text-2xl text left m-2'>Wallet Connected</h2>
-            <p>Your hosts: {optos}</p>
+            {/* <p>Your hosts: {optos}</p> */}
             {/* <h3>Balance: {walletAddress}</h3> */}
         </div>) : ( <div className='p-3 m-2'>
             <h2>Wallet Not Connected</h2>
@@ -72,10 +72,12 @@ export default function IRL() {
       ref={vncScreenRef}
     /> */}
     {walletConnected ? (
-      <iframe title="host" src={`http://opto0:6082/vnc.html?host=opto0&port=6082`} width='1000px' height="800px" />
+      <iframe title="host" src={`http://opto0:${port}/vnc.html?host=opto0&port=${port}`} width="auto" />
     ) : (
       "no Hosts available")}
       
     </div>
   );
 }
+
+

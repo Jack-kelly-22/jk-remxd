@@ -21,12 +21,12 @@ function Tool(tool) {
 
 function Tag(tag) {
   return (
-    <div
+    <span
       key={`tag-${tag.name}-${tag.i}`}
-      className={`rounded-xl px-3 py-1 bg-${tag.color} outline outline-2 hover:outline-${tag.color} hover:bg-opacity-0 hover:text-${tag.color}`}
+      className={`rounded-lg h-8  px-3 py-1 bg-${tag.color} outline outline-2 hover:outline-${tag.color} hover:bg-opacity-0`}
     >
-      <p className="ml-2 text-center text-sm text-white">{tag.name}</p>
-    </div>
+      <p className="text-center text-sm text-white">{tag.name}</p>
+    </span>
   );
 }
 
@@ -43,15 +43,12 @@ function GhBox(gh) {
         {gh.tags?.map((tag, index) => {
           return <Tag {...tag} i={index} />;
         })}
-          <div className="rounded-lg p-2 text-white hover:bg-pink">
+          <div className="rounded-lg p-2 text-white bg-pink hover:bg-transparent  outline outline-2 outline-pink hover:outline-pink">
             <a href={gh.url}>
               <FaGithub />
             </a>
           </div>
         </div>
-      </div>
-      <div className="flex flex-row gap-3">
-        
       </div>
     </div>
   );
@@ -143,7 +140,7 @@ export default function Index() {
             return <GhBox i={index} {...repo} />;
           })}
         </div>
-        <div className="justify-center bg-gradient-to-b from-blue to-pink bg-fixed bg-clip-text text-center  text-transparent ">
+        <div className="justify-center bg-gradient-to-b from-blue to-pink bg-fixed bg-clip-text text-center text-transparent ">
           <p className="text-5xl"> Tools</p>
           {resume.skills.map((category, index) => {
             return (
