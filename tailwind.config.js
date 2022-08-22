@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./app/**/*.{ts,tsx,jsx,js}"],
+  content: ["./src/**/*.{ts,tsx,jsx,js}"],
   plugins: [require("daisyui")],
   
   theme: {
@@ -22,8 +22,13 @@ module.exports = {
         '3xl': '0 35px 60px -15px rgba(200, 100, 0, 0.2)',
       },
       backgroundImage: {
-        "team-img": "url(../public/home/team-img.png)",
+        "hero-bg": "url('./images/coke_casette.jpg')",
+      },
+      spacing: {
+        'half': '20rem',
       }
+      
+
 
   }
 }
